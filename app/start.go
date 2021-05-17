@@ -16,5 +16,7 @@ func Start() {
 
 	hmux.HandleFunc("/customers/{customer_id}", getCustomerId)
 
+	hmux.HandleFunc("/addCust", AddCust).Methods(http.MethodPost)
+
 	http.ListenAndServe("localhost:8000", hmux) // passing new router , To use default use nil in 2nd param
 }

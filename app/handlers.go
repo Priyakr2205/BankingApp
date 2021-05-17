@@ -19,6 +19,10 @@ func handle_f(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Hello World!!!")
 }
 
+func AddCust(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "Create Customer")
+}
+
 func getCustomerId(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
